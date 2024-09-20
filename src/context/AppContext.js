@@ -1,5 +1,6 @@
 import React, { createContext, useReducer } from 'react';
 
+
 // 5. The reducer - this is used to update the state, based on the action
 export const AppReducer = (state, action) => {
     let budget = 0;
@@ -74,6 +75,7 @@ export const AppReducer = (state, action) => {
         default:
             return state;
     }
+    
 };
 
 // 1. Sets the initial state when the app loads
@@ -105,6 +107,8 @@ export const AppProvider = (props) => {
         }, 0);
         remaining = state.budget - totalExpenses;
     }
+    
+    
 
     return (
         <AppContext.Provider
